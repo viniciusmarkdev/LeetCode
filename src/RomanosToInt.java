@@ -8,7 +8,7 @@ public class RomanosToInt {
 	
 	public static void main(String[] args) {
 		
-		romanToInt("XIV");
+		romanToInt("IIIIII");
 	}
 	
 	
@@ -45,71 +45,71 @@ public class RomanosToInt {
 		char[] separar = s.toCharArray();
 		for(int i = 0;i<s.length();i++) {
 			
-         if(separar[i]=='I' && separar[i+1]=='V' ) {
-        	 
-        	 complementos.put('I',4);
-        	 complementos.put('V', 0);
-        	 
+        s.toUpperCase();
+       if(separar[i]=='I') {
+    	   
+    	   complementos.put('I', 1);
+    	   soma = soma+1;
+    	   
+       }
+       else if(separar[i]=='V') {
+    	   
+    	   complementos.put('V', 5);
+    	   somaV = somaV+5;
+    	  
+       }
        
-        	
-        	 
-        	 
-         }
-         
-         else if(separar[i+1]=='I' && separar[i]=='V'   ) {
-    		 
-        	 complementos.put('I',1);
-        	 complementos.put('V', 5);
-    	 }
-         
-         
-           if(separar[i]=='I' && separar[i+1]=='X' ) {
-        	 
-        	 complementos.put('I',9);
-        	 complementos.put('X',0);
-        	 
+       else if(separar[i]=='X') {
+    	   
+    	   complementos.put('X', 10);
+    	   somaX = somaX+10;
+       }
        
-        	
-        	 
-        	 
-         }
-         
-      else if (separar[i]=='X' && separar[i+1]=='I' &&
-    		   
-    		  ) {
-          	 
-          	 complementos.put('X',10);
-          	 complementos.put('I',1);
-          	 
-          	
-          	 
-         
-          	
-          	 
-          	 
-           }
-           
-       
-         
-       
+       else if(separar[i]=='L') {
+    	   
+    	   complementos.put('L', 50);
+    	   somaL = somaL+50;
+       }
+       else if(separar[i]=='C') {
+    	   
+    	   complementos.put('C', 100);
+    	   somaC = somaC+100;
+       }
+       else if(separar[i]=='D') {
+    	   
+    	   complementos.put('D', 500);
+    	   
+    	   somaD = somaD+500;
+       }
+       else if(separar[i]=='M') {
+    	   
+    	   complementos.put('M', 1000);
+    	   somaM= somaM+1000;
+       }
       
-         
+       
+       
+	      }
+      
      
     	   
 	
 		System.out.println(complementos);
 		
 		
-		int somaTotal = complementos.get('I')+
-				complementos.get('V')+complementos.get("X");
-				
+		
+       
+		int somaTotal = soma+somaV+somaX+somaL+somaD+somaC+
+				somaM;
+		
 		
 		 System.out.println(somaTotal);
 	
 		
 		
-	}
-		
+	
+		   
+		      
 		
 		
 		return 1;
