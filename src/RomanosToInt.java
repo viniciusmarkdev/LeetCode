@@ -1,3 +1,4 @@
+import java.awt.datatransfer.StringSelection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -8,7 +9,7 @@ public class RomanosToInt {
 	
 	public static void main(String[] args) {
 		
-		romanToInt("IIIIII");
+		romanToInt("MMMXLV");
 	}
 	
 	
@@ -39,6 +40,10 @@ public class RomanosToInt {
 		int somaC = 0;
 		int somaD = 0;
 		int somaM = 0;
+		
+		int sub = 0;
+		
+	     int totalCharacters = 0;
 	
 		Map< Character , Integer> complementos = new HashMap();
         
@@ -86,8 +91,10 @@ public class RomanosToInt {
     	   complementos.put('M', 1000);
     	   somaM= somaM+1000;
        }
-      
+
        
+     
+      
        
 	      }
       
@@ -96,23 +103,96 @@ public class RomanosToInt {
 	
 		System.out.println(complementos);
 		
-		
+		 Map< String , Integer> strings = new HashMap();
+		   
+	       for(int j =0 ; j<s.length();j++) {
+	    	   
+	    	   System.out.println(strings);
+	    	   s.toUpperCase();
+	           
+	    	   if(s.contains("IV")==true) {
+	    		   
+	    		   strings.put("IV" , 2);
+	    	   }
+	    	   
+	    	   else {
+	    		   strings.put("IV" , 0);
+	    	   }
+	    	   
+               if(s.contains("IX")==true) {
+	    		   
+	    		   strings.put("IX" , 2);
+	    	   }
+	    	   
+	    	   else {
+	    		   strings.put("IX" , 0);
+	    	   }
+	    	   
+	    	   
+             
+	    	   if(s.contains("XC")==true) {
+	    		   
+	    		   strings.put("XC" , 20);
+	    	   }
+	    	   
+	    	   else {
+	    		   strings.put("XC" , 0);
+	    	   }
+	    
+          if(s.contains("CM")==true) {
+   		   
+   		   strings.put("CM" , 200);
+   	       }
+          
+          else {
+   		   strings.put("CM", 0);
+   	      }
+          
+          if(s.contains("CD")==true) {
+      		   
+      		   strings.put("CD" , 200);
+      	       }
+             
+             else {
+      		   strings.put("CD", 0);
+      	      }
+          
+          if(s.contains("XL")==true) {
+     		   
+     		   strings.put("XL" , 20);
+     	       }
+            
+            else {
+     		   strings.put("XL", 0);
+     	      }
+
+             
+          
+   	   
+
+	     
+	    	 
+	    	  
+	   		
+	   		
+	   
+
+	       }
+	      
 		
        
-		int somaTotal = soma+somaV+somaX+somaL+somaD+somaC+
-				somaM;
-		
-		
-		 System.out.println(somaTotal);
-	
-		
-		
-	
-		   
+	       int somaTotal = soma+somaV+somaX+somaL+somaD+somaC+
+	   				somaM-sub - strings.get("IV")- 
+	   				strings.get("XC")-strings.get("CM")
+	   				-strings.get("IX")
+		            -strings.get("CD")-strings.get("XL");
+
+
 		      
 		
 		
-		return 1;
+	
+		return somaTotal;
 	
 	}
 	
