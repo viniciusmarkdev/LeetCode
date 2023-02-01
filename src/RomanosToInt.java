@@ -9,7 +9,7 @@ public class RomanosToInt {
 	
 	public static void main(String[] args) {
 		
-		romanToInt("MMMXLV");
+		romanToInt("LVIIII");
 	}
 	
 	
@@ -107,7 +107,7 @@ public class RomanosToInt {
 		   
 	       for(int j =0 ; j<s.length();j++) {
 	    	   
-	    	   System.out.println(strings);
+	    	   
 	    	   s.toUpperCase();
 	           
 	    	   if(s.contains("IV")==true) {
@@ -186,7 +186,9 @@ public class RomanosToInt {
 	   				strings.get("XC")-strings.get("CM")
 	   				-strings.get("IX")
 		            -strings.get("CD")-strings.get("XL");
-
+               
+	       
+	       System.out.println(somaTotal);
 
 		      
 		
