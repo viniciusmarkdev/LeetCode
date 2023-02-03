@@ -4,7 +4,7 @@ public class PalindromeNumber {
 	 
 	public static void main(String[] args) {
 		
-	isPalindrome(1236);
+	isPalindrome(12211);
 		
 	}
 	public  static boolean isPalindrome(int x) {
@@ -12,35 +12,43 @@ public class PalindromeNumber {
 		
 	    String intToString = String.valueOf(x);
 	    char[] separarNumero = intToString.toCharArray();
-		int k = 0;
-		int l = 0;
-	    for(int i  = intToString.length()-1; i >=0 ; i--) {
+	  
+	    boolean Ispalindrome = false;
+	
+	    int j  =  0;
+	    int k = 0;
+	    for( int i  = 0 ; i<=intToString.length()-1 ; i++) {
 			
-			
-	         System.out.println(separarNumero[i]);
-	          
-			 
-		}
 	    
-	    
-	    for(int j = 0 ; j < intToString.length(); j++) {
-		
-		
-	    	 System.out.println(separarNumero[j]);
-	    	 
-			
-		}
-		
-	    
-	    if(separarNumero[l]==separarNumero[k]) {
-		
-		return true;
-	}  
-	    else {
+	    	System.out.println(separarNumero[i]);
 	    	
-	    	return false;
+	    	
+		j++;
+        if (separarNumero[intToString.length()-j]==
+        		separarNumero[i] ) {
+        
+        	Ispalindrome = true;
+        }
+			
+        else {
+        	
+        	Ispalindrome = false;
+        	
+        	
+        }
+        
 	    }
-
+	    
+	    
+	   
+	    System.out.println(Ispalindrome);
+	    
+	    
+	
+	    
+		return Ispalindrome;
 }
+	
+	
 	
 }
