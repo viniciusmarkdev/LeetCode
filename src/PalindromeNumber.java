@@ -4,7 +4,7 @@ public class PalindromeNumber {
 	 
 	public static void main(String[] args) {
 		
-	isPalindrome(1211);
+	isPalindrome(2233314);
 		
 	}
 	public  static boolean isPalindrome(int x) {
@@ -23,12 +23,9 @@ public class PalindromeNumber {
 			
 	   
 		j++;
-		System.out.print(separarNumero[intToString.length()-j]);
-		
-        System.out.println(separarNumero[i]);
+	
        
-       
-        if(separarNumero[intToString.length()-3]==separarNumero[2]) {
+        if(separarNumero[intToString.length()-j]==separarNumero[i]) {
         	
         	k++;
         	
@@ -42,18 +39,18 @@ public class PalindromeNumber {
 	    
 	  if(k==intToString.length()) {
 		  
-		  System.out.println("É palindromo");
+		  Ispalindrome = true ;
 		  
 	  }
 	  
 	  else {
 		  
-		  System.out.println("Não é  palindromo");
+		  Ispalindrome = false;
 	  }
 	 
 	    
 	   
-	    System.out.println(Ispalindrome);
+	  
 	    
 	    
 	
