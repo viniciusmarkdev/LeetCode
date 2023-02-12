@@ -10,7 +10,9 @@ public class PalindromeNumberFast {
 		System.out.println(121%10);
 		System.out.println(121/10);
 		System.out.println(12/10);
-		System.out.println(11/10);
+		System.out.println(11/10
+				
+				);
 	}
 	
     public boolean isPalindrome(int x) {
