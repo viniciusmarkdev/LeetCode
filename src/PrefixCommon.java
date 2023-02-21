@@ -1,12 +1,12 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class PrefixCommon {
 	
 	public static void main(String[] args) {
 		
 		
-		
-		
-		String [] a = { "fogo", "folha" , "forma"};
+		String [] a = {"flower" , "flow" , "flight"};
 		longestCommonPrefix(a);
 	}
 	
@@ -14,34 +14,122 @@ public class PrefixCommon {
 	
 	 public static String longestCommonPrefix(String[] strs) {
 		 
+		 /*
+		  *  A classe StringBuffer serve para concatenarmos
+		  *  letras ou palavras , para isso usamos o método
+		  *  append.
+		  * */
 		
 		 
-				for(int i= 0 ; i< strs.length ; i++) {
-					
-					
-					for(int j=0 ; j< strs[i].length() ; j++) {
-						
-						
-						char [] letras = strs[i].toCharArray();
-						System.out.println(letras[j]);
-						
-												
-					}
-					
-					
-					
-					
-			       
-				
-				}
-				return null;
-	         
+		 StringBuffer ans=new StringBuffer();
+		 
+		 
+		    /*
+		     *Se houver somente 1 elemento no vetor de Array
+		     *ele será retornado
+		     */
+		    
+	        if(strs.length==1)
+	        {
+	            return strs[0];
+	        }
+	        // Encontrando a menor String
+	      
+	        /*
+	         * Iniciamos uma varíavel com a 
+	         * String no indice 0.
+	         * 
+	         * No looping iremos comparar o tamanho  das Strings em 
+	         * cada posição e ver se ela é menor que
+	         * a String min se ela for   essa
+	         * String é adicionada na Variavel min 
+	         * e o Index da nova String menor que a 
+	         * inicializada é adicionado na váriavel index.
+	         * 
+	         * 
+	         * Fazemos esse looping até achar a menor
+	         * 
+	         */
+	       
+	        int min=strs[0].length();
 	  
-			
-
+	        int index=0;
+	        for(int i=0;i<strs.length;i++)
+	        {
+	            if(strs[i].length()<min)
+	            {
+	                min=strs[i].length();
+	                index=i;
+	                
+	            }
+	        }   
+	        
+	        //Posição da menor palavra é igual a 1
+	        System.out.println(index);
+	        
+	        //Tamanho da palavra é  igual a 4
+	        System.out.println(min);
+	        
+	       //COMPARAR OS CARACTERES DE TODAS AS OUTRAS STRING COM A 
+	       //MENOR STRING E...
+	     
+	        // A String check é  a menor String no index 1
+	        String check=strs[index];
+	     //   <!-- System.out.println(check); -->
+	        
+	        //O primeiro loop define a quantidade
+	        //de vezes  que o segundo loop executara.
+	        // Nesse caso, essa quantidade será 
+	        //o tamanho da menor palavra , que tem 
+	        //o tamanho 4 .
+	        
+	        for(int i=0;i<check.length();i++)
+	        {
+	        	/*
+	        	 * No index 0 , pegaremos 
+	        	 * a primeira letra e assim por
+	        	 * diante.Nesse caso, o índice
+	        	 * 0 será "f", o 1 será "l" , o 2 será 
+	        	 * "o" e o 3 será "w" .
+	        	 * */
+	            char ch= check.charAt(i);
+	            
+	            /*
+	             * No indice 0 do primeiro loop
+	             * copararemos as primeiras letras
+	             * de
+	             * 
+	             * 
+	             * */
+	            
+	           System.out.println(check.charAt(2));
+	           
+	            
+	            
+	            
+	            
+	            
+	            
+	            for(int j=0;j<strs.length;j++)
+	            {
+	                if(strs[j].charAt(i)!=ch)
+	                {
+	     
+	            System.out.println(strs[j].charAt(i));
+	            return ans+"";
+	                }
+	                
+	            }
+	            ans.append(ch);
+	            
+	            
+	        }
+	      
+	        
+	      
+	        return ans+"";
+	     	 
 }
-		
 	 
-		 
-	 }
-
+}
+	 
