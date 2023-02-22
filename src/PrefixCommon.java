@@ -78,7 +78,7 @@ public class PrefixCommon {
 	     //   <!-- System.out.println(check); -->
 	        
 	        //O primeiro loop define a quantidade
-	        //de vezes  que o segundo loop executara.
+	        //de vezes  que o segundo loop executará.
 	        // Nesse caso, essa quantidade será 
 	        //o tamanho da menor palavra , que tem 
 	        //o tamanho 4 .
@@ -97,12 +97,13 @@ public class PrefixCommon {
 	            /*
 	             * No indice 0 do primeiro loop
 	             * copararemos as primeiras letras
-	             * de
+	             * de das outras strings com a 
+	             * primeira letra de flow.
 	             * 
 	             * 
 	             * */
 	            
-	           System.out.println(check.charAt(2));
+	         
 	           
 	            
 	            
@@ -115,8 +116,8 @@ public class PrefixCommon {
 	                if(strs[j].charAt(i)!=ch)
 	                {
 	     
-	            System.out.println(strs[j].charAt(i));
-	            return ans+"";
+	            
+	                    return ans+"";
 	                }
 	                
 	            }
