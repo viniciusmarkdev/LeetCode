@@ -96,10 +96,10 @@ public class PrefixCommon {
 	            
 	            /*
 	             * No indice 0 do primeiro loop
-	             * copararemos as primeiras letras
-	             * de das outras strings com a 
-	             * primeira letra de flow.
-	             * 
+	             * compararemos as primeiras letras
+	             * das outras strings com a 
+	             * primeira letra de flow. 
+	             * E assim por diante..
 	             * 
 	             * */
 	            
@@ -113,6 +113,21 @@ public class PrefixCommon {
 	            
 	            for(int j=0;j<strs.length;j++)
 	            {
+	            	
+	            	/*
+	            	 * Se  as letras forem diferentes
+	            	 * retornaremos ans sem nada , null.
+	            	 * 	Se forem iguais o loop continuará
+	            	 * até percorrer cada letra em cada
+	            	 * posição do array e ao final 
+	            	 * fará a junção no da letra ch no índice(i).
+	            	 * 
+	            	 * se ele encontrar uma letra diferente ele
+	            	 * retornará o ch que provavelmete já foi 
+	            	 * concatenado várias vezes mais o valor nulo 
+	            	 * e o looping acabrá.
+	            	 * 
+	            	 * */
 	                if(strs[j].charAt(i)!=ch)
 	                {
 	     
