@@ -3,13 +3,13 @@ public class ValidParentheses {
 	
 	public static void main(String[] args) {
 		
-		isValid("[]{}()[]");
+		isValid("()");
 	}
 	
 	 public  static boolean isValid(String s) {
 		
 		 
-		 boolean StringValida = false ;
+          boolean StringValida = false ;
 		 
 		 if( s.length()%2 == 1 ||
 				 s.charAt(0)==s.charAt(1) ||  s.charAt(0)!=s.charAt(1)) {
@@ -17,7 +17,11 @@ public class ValidParentheses {
 			 StringValida= false;
 			 
 		 }
+		 
+	
 		 else {
+			 
+			 
 		 
 		 for(int i=0; i<s.length();i++) {
 			 
@@ -55,17 +59,54 @@ public class ValidParentheses {
 			 
 		 }
 		
+		 
+		
 		 }
 		 
 		
+	    
+		 if(StringValida==false && s.length()%2 != 1 ) {
+			
+			 int j = 0;
+			 
+		
+			 for(int i=0; i<s.length();i++) {
+				 
+				 char [] ch = s.toCharArray();
+					
+				  
+			    
+	   if(ch[i]=='[' && ch[s.length()-1-j]==']' ||  
+	    ch[i]=='(' && ch[s.length()-1-j]==')' ||
+	   ch[i]=='{' && ch[s.length()-1-j]=='}' 
+			
+			) {
+			    	
+		           
+		        StringValida = true;
+		        j++;
+			    	
+			    
+			    }
+	   else {
+		  
+		   StringValida = false;
+
+	   }
 	
-		 
-		 return StringValida;
+			
+			 }
+			 
+			
+		 }
+		
+			
 		
 	        
-	        
-	    }
+	    
+		 System.out.println(StringValida);
+		 return StringValida;
 
 	 
-     
+	 }
 }
