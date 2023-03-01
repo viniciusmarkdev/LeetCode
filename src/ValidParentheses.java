@@ -5,10 +5,18 @@ public class ValidParentheses {
 		
 		isValid("(([]){})");
 	}
+	
+	
+	
+	
+	
+	
 
 	 public  static boolean isValid(String s) {
+		
 		 int l= 0;
 	     int m =0;
+	     int validar = 0;
 		 
           boolean StringValida = false ;
 		 
@@ -18,6 +26,7 @@ public class ValidParentheses {
 			 StringValida= false;
 			 
 		 }
+	
 		 
 	
 		 else {
@@ -33,6 +42,9 @@ public class ValidParentheses {
 			 
 		 
 	      for(int j=i+1; j<s.length();j++) {
+	    	  
+	    	  
+	    	  
 	    	  
 	    	  
 	    	  if(ch[i]=='['  && ch[j]==']'  
@@ -78,7 +90,8 @@ public class ValidParentheses {
 		     for(int i=0; i<s.length()-k;i++) {
 				 
 				 char [] ch = s.toCharArray();
-					
+			
+	 
 				
 			    
 	   if(ch[i]=='[' && ch[s.length()-1-j]==']' ||  
@@ -136,18 +149,27 @@ public class ValidParentheses {
 				   StringValida = false;
 				   
 			   }
+			  
+        	    
+
+        		 
+        		 
+        		 
+        		 
+
 			   
-			   
-		    
+                
+        		
 			 
 			
 		 }
 		
+		
 			
 		
-	    
-		
-	    
+		 
+		 System.out.println(validar);
+	   
 		 System.out.println(StringValida);
 		 return StringValida;
 
