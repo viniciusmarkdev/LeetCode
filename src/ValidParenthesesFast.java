@@ -5,33 +5,38 @@ public class ValidParenthesesFast {
 	public static void main(String[] args) {
 
 		
-		System.out.println(isValid("()"));
+		System.out.println(isValid("(([]){})"));
 	}
 
 	public static boolean isValid(String s) {
 
-		   // Create a new stack to store the characters.
+		//Cria uma pilha para armazenar os personagens
         Stack<Character> stack = new Stack<>();
+     
 
-
-        // convert string into char array and access the characters using for each loop.
+     //converte string em um array de char e acessa os caracteres
+     //usando for each loop.
         for(char ch: s.toCharArray())
         {
-            // check ch
+            // verifica ch
             switch (ch)
             {
-                // open bracket then push it in stack.
-                // close bracket then pop the item and compare.
+        // abre o colchete e empurreo-o na pilha
+        // fecha o colchete, abre o item e compara
                 case '(':
                 case '{':
                 case '[':
                     stack.push(ch);
+                    System.out.println(stack);
                     break;
                 case ')':
-                    if(stack.isEmpty() || stack.pop() != '(')
+                System.out.println(stack);
+               if(stack.isEmpty() || stack.pop() != '(')
 
-                    // if the stack is empty then it means string have no open bracket.
-                        // hence it is invalid.
+      
+     // se a pilha estiver vazia, significa que a string não 
+     // tem colchetes abertos
+     // portanto é inválido
                     {
                         return false;
                     }
@@ -52,11 +57,12 @@ public class ValidParenthesesFast {
         }
 
 
-        // After the loop we have to check one more condition.
-        // return true only if the stack is empty.
-        // if stack is not empty that means we have unused brackets.
-
+        // Após o loop temos que verificar mais uma condição
+        // retorna verdadeiro somente se a pilha estiver vazia
+        // se a pilha não estiver vazia, isso significa que temos
+        //colchetes não utilizados
+    
         return stack.isEmpty();
-        
+       
     }
 }
