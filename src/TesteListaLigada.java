@@ -3,12 +3,20 @@ public class TesteListaLigada {
 	
 	public static void main(String[] args) {
 		
+	 
+		
+	  
+	   
+	
+	 
+	  
+		
 		ListaLigadaPratica list = new ListaLigadaPratica();
-		list.adicionar("SP");
-		list.adicionar("RJ");
-		list.adicionar("DF");
-		list.adicionar("AC");
-		list.adicionar("AM");
+		
+		list.adicionar(1);
+		list.adicionar(2);
+		list.adicionar(4);
+	
 		
 		System.out.println("O tamanho da lista é " + list.getTamanho());
 		
@@ -38,10 +46,6 @@ public class TesteListaLigada {
 		System.out.println("Removendo itens");
 		
 	
-		list.remover("SP");
-		list.remover("RJ");
-		list.remover("DF");
-		list.remover("AC");
 	
 		
 		
@@ -54,6 +58,12 @@ public class TesteListaLigada {
 		
 		
 		
+		
+		System.out.println(list);
+		
+		
+		
+		;
 		
 	}
 

@@ -5,6 +5,8 @@ public class ListaLigadaPratica {
 	
 	Elemento ultimo;
 	
+	Elemento proximo;
+	
 	
 	
 	int tamanho = 0;
@@ -46,7 +48,23 @@ public class ListaLigadaPratica {
 	}
 	
 	
-	public void adicionar(String novoValor) {
+	
+				 
+				 
+			 
+			 
+		 
+		 
+
+		 
+		
+		
+		
+	
+	 
+	
+	
+	public void adicionar(int novoValor) {
 		
 		Elemento novoElemento = new Elemento(novoValor);
 		
@@ -68,7 +86,9 @@ public class ListaLigadaPratica {
 		
 	}
 	
-	public void remover(String valorProcurado) {
+	
+
+	public void remover(int valorProcurado) {
 		
 		Elemento anterior = null;
 		Elemento atual = this.primeiro;
@@ -76,7 +96,7 @@ public class ListaLigadaPratica {
 		for(int i=0 ; i< this.getTamanho() ; i++) {
 			
 			
-		 if(atual.getValor().equalsIgnoreCase(valorProcurado)) {
+		 if(atual.getValor() ==(valorProcurado)) {
 			 
 			 if(atual == primeiro && atual == ultimo) {
 				 
@@ -119,6 +139,8 @@ public class ListaLigadaPratica {
 		
 	}
 	
+
+	
 	
 	public Elemento get(int posicao) {
 		
@@ -137,6 +159,11 @@ public class ListaLigadaPratica {
 		return atual;
 	
 	}
+	
+	
+		
+		
+	
 
 
 
